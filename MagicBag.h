@@ -1,4 +1,7 @@
+#ifndef MAGICBAG_H
+#define MAGICBAG_H
 #include "Bag.h"
+#include "PlainBag.h"
 #include <iostream>
 
 using namespace std;
@@ -11,7 +14,9 @@ class MagicBag : public PlainBag<T> {
             // create constructor
         }
         void print() const {
-            cout << "\n[]"; //override print and print empty list
+            cout << "[]"; //override print and print empty list
         }
 
 };
+
+#endif

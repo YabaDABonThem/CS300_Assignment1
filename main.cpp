@@ -10,10 +10,10 @@ void testBag(Bag<T>& bag){
     T value;
     T item1 = 1;
     T item2 = 2;
-    for(int i=0; i<20; i++){
-        value=rand()%6 +1; //assume storing integers for sake of simplicity
-        bag.insert(value);
-    }
+    // for(int i=0; i<20; i++){
+    //     value=rand()%6 +1; //assume storing integers for sake of simplicity
+    //     bag.insert(value);
+    // }
     bag.print();
     cout << "\nNumber of items:"<<bag.size();
     cout << "\nNumber of ones:"<<bag.count(item1);
@@ -34,6 +34,8 @@ int main()
     cout<<"Testing Magic Bag"<<endl;
     bag = new MagicBag<int>;
     testBag(*bag);
-
+    // OWN TESTS
+    
+    delete bag;
     return 0;
 }

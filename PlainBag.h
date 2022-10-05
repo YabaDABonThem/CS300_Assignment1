@@ -1,3 +1,5 @@
+#ifndef PLAINBAG_H
+#define PLAINBAG_H
 #include "Bag.h"
 #include <iostream>
 
@@ -84,8 +86,12 @@ class PlainBag : public Bag<T> {
         }
 
         void print() const {
+            if (isEmpty()) {
+                cout << "[]";
+                return;
+            }
             // iterate thru array and cout everything
-            cout << "\n[";
+            cout << "[";
             for (int i = 0; i < bagSize-1; ++i) {
                 cout << contents[i] << ", ";
             }
@@ -94,3 +100,4 @@ class PlainBag : public Bag<T> {
 
 
 };
+#endif

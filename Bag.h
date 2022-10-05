@@ -1,6 +1,7 @@
 #ifndef BAG_INTERFACE
 #define BAG_INTERFACE
 
+
 template<class T>
 class Bag
 {
