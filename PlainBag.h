@@ -54,7 +54,6 @@ class PlainBag : public Bag<T> {
 
         bool contains(const T& item) const {
             // Loop through the array
-            // use ampersand for reference
             for (int i = 0; i < bagSize; ++i) {
                 if (contents[i] == item) {
                     return true;
@@ -67,20 +66,20 @@ class PlainBag : public Bag<T> {
             // query the bag and find the count of the amount of items there are
             int num = 0;
             for (int i = 0; i < bagSize; ++i) {
-                if (contents[i] == item) { // is this the right comparator?
-                    ++num;
+                if (contents[i] == item) { 
+                    ++num; // keep track of the number of items
                 }
             }
             return num;
         }
 
         bool isEmpty() const {
-            if (bagSize <= 0) return true;
+            if (bagSize <= 0) return true; // check the size
             return false;
         }
 
         bool isFull() const {
-            if (bagSize >= 20) return true; 
+            if (bagSize >= 20) return true; //check the size
             return false;
         }
 
@@ -90,7 +89,7 @@ class PlainBag : public Bag<T> {
             for (int i = 0; i < bagSize-1; ++i) {
                 cout << contents[i] << ", ";
             }
-            cout << contents[bagSize-1] << "]"; // make this method repeatable
+            cout << contents[bagSize-1] << "]";
         }
 
 

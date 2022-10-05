@@ -8,10 +8,10 @@ class MagicBag : public PlainBag<T> {
     public:
         MagicBag()
         {
-
+            // create constructor
         }
         void print() const {
-            cout << "\n[]";
+            cout << "\n[]"; //override print and print empty list
         }
 
 };
